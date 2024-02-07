@@ -10,4 +10,4 @@ urlpatterns = [
     path('portfolio/', portfolio),
     path('blog/', blog, name='blog'),
     path('blog/<int:pk>/', blog_detail, name='blog_detail'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static( settings.STATIC_URL, document_root=settings.STATIC_ROOT)
