@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Profile, Skill, About, Category, Post
+from .models import Profile, Skill, About, Category, Post, Portfolio
 from django.shortcuts import get_object_or_404
 
 def index(request):
@@ -7,11 +7,13 @@ def index(request):
     skills = Skill.objects.all()
     about = About.objects.first()
     category = Category.objects.all()
+    portfolios = Portfolio.objects.all()
     context = {
         "profile": profile,
         "skills": skills,
         "about": about,
-        "category": category
+        "category": category,
+        "portfolios": portfolios
         }
     return render(request, 'index.html',context)
 

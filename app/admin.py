@@ -28,6 +28,10 @@ class ServiceAdmin(admin.ModelAdmin):
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
     list_display = ('title',)
+
+@admin.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ('title','id')
 # @admin.site.register(Skill)
 # @admin.site.register(About)
 # @admin.site.register(Category)
